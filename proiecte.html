@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proiectele Noastre – VeraMob Craiova</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background: #1f2933;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #d1d5db;
+      text-decoration: none;
+    }
+
+    nav a:hover { color: #fff; }
+
+    section { padding: 70px 0; }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .category { margin-bottom: 70px; }
+
+    .category h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,.08);
+    }
+
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .header-flex { flex-direction: column; gap: 10px; }
+      section { padding: 50px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-flex">
+    <h1>VeraMob Craiova</h1>
+    <nav>
+      <a href="index.html">Acasă</a>
+      <a href="proiecte.html">Proiecte</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">Proiectele noastre</h2>
+  </div>
+</section>
+
+<!-- BUCATARII -->
+<section class="category">
+  <div class="container">
+    <h3>Bucătării</h3>
+    <div class="gallery">
+      <img src="SRC_GOOGLE_PHOTOS_AICI_1" alt="Bucătărie VeraMob">
+      <img src="SRC_GOOGLE_PHOTOS_AICI_2" alt="Bucătărie modernă">
+      <img src="SRC_GOOGLE_PHOTOS_AICI_3" alt="Bucătărie la comandă">
+    </div>
+  </div>
+</section>
+
+<!-- LIVING -->
+<section class="category">
+  <div class="container">
+    <h3>Living</h3>
+    <div class="gallery">
+      <img src="SRC_GOOGLE_PHOTOS_AICI_4" alt="Living VeraMob">
+      <img src="SRC_GOOGLE_PHOTOS_AICI_5" alt="Mobilier living">
+      <img src="SRC_GOOGLE_PHOTOS_AICI_6" alt="Living modern">
+    </div>
+  </div>
+</section>
+
+<!-- DORMITOARE -->
+<section class="category">
+  <div class="container">
+    <h3>Dormitoare</h3>
+    <div class="gallery">
+      <img src="SRC_GOOGLE_PHOTOS_AICI_7" alt="Dormitor VeraMob">
+      <img src="SRC_GOOGLE_PHOTOS_AICI_8" alt="Dormitor modern">
+      <img src="SRC_GOOGLE_PHOTOS_AICI_9" alt="Mobilier dormitor">
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 VeraMob Craiova
+</footer>
+
+</body>
+</html>
