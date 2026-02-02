@@ -4,144 +4,1027 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proiectele Noastre – VeraMob Craiova</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23DAA520;stop-opacity:0.3'/%3E%3Cstop offset='100%25' style='stop-color:%23DAA520;stop-opacity:0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='15' fill='url(%23grad)' stroke='%23DAA520' stroke-width='3' opacity='0.3'/%3E%3Ctext x='25' y='65' font-family='Arial, sans-serif' font-size='40' font-weight='bold' fill='%231a1a1a'%3EV%3C/text%3E%3Ctext x='60' y='65' font-family='Arial, sans-serif' font-size='40' font-weight='bold' fill='%231a1a1a'%3EM%3C/text%3E%3C/svg%3E">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+CU:wght@100..400&family=Playwrite+RO:wght@100..400&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #f7f7f7;
+      font-family: 'Inter', sans-serif;
+      background: #f5f3f0;
       color: #333;
+      line-height: 1.6;
     }
 
     header {
-      background: #1f2933;
-      color: #fff;
-      padding: 20px 0;
+      background: transparent;
+      padding: 25px 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
+    .header-container {
+      max-width: 1400px;
       margin: auto;
-    }
-
-    .header-flex {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    nav a {
-      margin-left: 20px;
-      color: #d1d5db;
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-transform: uppercase;
       text-decoration: none;
     }
 
-    nav a:hover { color: #fff; }
+    .logo-monogram {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(218, 165, 32, 0.15), rgba(218, 165, 32, 0.25));
+      border-radius: 8px;
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: #1a1a1a;
+      animation: furnitureFloat 3s ease-in-out infinite;
+      border: 2px solid rgba(218, 165, 32, 0.2);
+    }
 
-    section { padding: 70px 0; }
+    .logo-monogram::before {
+      content: 'V';
+      position: absolute;
+      left: 8px;
+      font-size: 1.2rem;
+    }
 
-    .section-title {
+    .logo-monogram::after {
+      content: 'M';
+      position: absolute;
+      right: 8px;
+      font-size: 1.2rem;
+    }
+
+    @keyframes furnitureFloat {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-5px) rotate(5deg);
+      }
+    }
+
+    .logo:hover .logo-monogram {
+      animation: furnitureFloat 1s ease-in-out infinite;
+      background: linear-gradient(135deg, rgba(218, 165, 32, 0.25), rgba(218, 165, 32, 0.35));
+      border-color: rgba(218, 165, 32, 0.4);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    nav a {
+      color: #1a1a1a;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: color 0.3s;
+      position: relative;
+      z-index: 1001;
+      letter-spacing: 0.3px;
+    }
+
+    nav a:hover { color: #666; }
+
+    .btn-header {
+      padding: 10px 24px;
+      border: 1px solid #1a1a1a;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.3s;
+      position: relative;
+      z-index: 1001;
+    }
+
+    .btn-header:hover {
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    nav.desktop-nav {
+      display: flex;
+    }
+
+    /* MOBILE MENU */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+      z-index: 1002;
+      position: relative;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 2px;
+      background: #1a1a1a;
+      transition: all 0.3s;
+      border-radius: 2px;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .mobile-menu {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 1001;
+      padding: 100px 30px 30px;
+      flex-direction: column;
+      gap: 30px;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    .mobile-menu a {
+      font-size: 1.2rem;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .mobile-menu .btn-header {
+      margin-top: 20px;
       text-align: center;
+      padding: 15px;
+      border-bottom: none;
+    }
+
+    /* MAIN CONTENT */
+    .main-content {
+      padding-top: 120px;
+      padding-bottom: 60px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 15px;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* CATEGORY SECTIONS */
+    .category {
+      margin-bottom: 80px;
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #e5e5e5;
+    }
+
+    .category-header h2 {
+      font-family: 'Playfair Display', serif;
       font-size: 2rem;
-      margin-bottom: 40px;
+      font-weight: 600;
+      color: #1a1a1a;
     }
 
-    .category { margin-bottom: 70px; }
-
-    .category h3 {
-      text-align: center;
-      margin-bottom: 20px;
+    .category-count {
+      font-size: 0.9rem;
+      color: #999;
+      font-weight: 400;
     }
 
+    /* GALLERY GRID - COMPACT */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 20px;
     }
 
-    .gallery img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      aspect-ratio: 4/3;
+      background: #f0f0f0;
     }
 
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 100%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
+    /* FOOTER */
     footer {
-      background: #111827;
+      background: #1a1a1a;
       color: #9ca3af;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
+      font-size: 0.9rem;
+    }
+
+    /* LOADING STATE */
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: #999;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 18px;
+      }
     }
 
     @media (max-width: 768px) {
-      .header-flex { flex-direction: column; gap: 10px; }
-      section { padding: 50px 0; }
+      header {
+        padding: 20px 30px;
+      }
+
+      .container {
+        padding: 0 30px;
+      }
+
+      .main-content {
+        padding-top: 100px;
+      }
+
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+
+      .category-header h2 {
+        font-size: 1.6rem;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+      }
+
+      .desktop-nav {
+        display: none !important;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        gap: 15px;
+        font-size: 0.85rem;
+      }
+
+      .btn-header {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .page-header h1 {
+        font-size: 1.8rem;
+      }
+
+      .category-header h2 {
+        font-size: 1.4rem;
+      }
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 10000;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.3s;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-content img {
+      max-width: 100%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+      z-index: 10001;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: all 0.3s;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: rotate(90deg);
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      font-size: 30px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: all 0.3s;
+      z-index: 10001;
+    }
+
+    .lightbox-nav:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .lightbox-prev {
+      left: 30px;
+    }
+
+    .lightbox-next {
+      right: 30px;
+    }
+
+    .lightbox-counter {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 18px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 20px;
+      z-index: 10001;
+    }
+
+    @media (max-width: 768px) {
+      .lightbox-nav {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+      }
+
+      .lightbox-prev {
+        left: 15px;
+      }
+
+      .lightbox-next {
+        right: 15px;
+      }
+
+      .lightbox-close {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="container header-flex">
-    <h1>VeraMob Craiova</h1>
-    <nav>
+  <div class="header-container">
+    <a href="index.html" class="logo">
+      <div class="logo-monogram"></div>
+      <span>VeraMob</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="desktop-nav">
       <a href="index.html">Acasă</a>
       <a href="proiecte.html">Proiecte</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="contact.html" class="btn-header">Contactează-ne</a>
+    </nav>
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Acasă</a>
+      <a href="proiecte.html">Proiecte</a>
+      <a href="contact.html" class="btn-header">Contactează-ne</a>
     </nav>
   </div>
 </header>
 
-<section>
+<div class="main-content">
   <div class="container">
-    <h2 class="section-title">Proiectele noastre</h2>
-  </div>
-</section>
-
-<!-- BUCATARII -->
-<section class="category">
-  <div class="container">
-    <h3>Bucătării</h3>
-    <div class="gallery">
-      <img src="SRC_GOOGLE_PHOTOS_AICI_1" alt="Bucătărie VeraMob">
-      <img src="SRC_GOOGLE_PHOTOS_AICI_2" alt="Bucătărie modernă">
-      <img src="SRC_GOOGLE_PHOTOS_AICI_3" alt="Bucătărie la comandă">
+    <div class="page-header">
+      <h1>Proiectele noastre</h1>
+      <p>Descoperă colecția noastră de mobilier la comandă, creat cu pasiune și atenție la detalii</p>
     </div>
-  </div>
-</section>
 
-<!-- LIVING -->
-<section class="category">
-  <div class="container">
-    <h3>Living</h3>
-    <div class="gallery">
-      <img src="SRC_GOOGLE_PHOTOS_AICI_4" alt="Living VeraMob">
-      <img src="SRC_GOOGLE_PHOTOS_AICI_5" alt="Mobilier living">
-      <img src="SRC_GOOGLE_PHOTOS_AICI_6" alt="Living modern">
-    </div>
-  </div>
-</section>
+    <!-- BUCATARII -->
+    <section class="category">
+      <div class="category-header">
+        <h2>Bucătării</h2>
+        <span class="category-count" id="bucatarii-count"></span>
+      </div>
+      <div class="gallery" id="bucatarii-gallery">
+        <div class="loading">Se încarcă...</div>
+      </div>
+    </section>
 
-<!-- DORMITOARE -->
-<section class="category">
-  <div class="container">
-    <h3>Dormitoare</h3>
-    <div class="gallery">
-      <img src="SRC_GOOGLE_PHOTOS_AICI_7" alt="Dormitor VeraMob">
-      <img src="SRC_GOOGLE_PHOTOS_AICI_8" alt="Dormitor modern">
-      <img src="SRC_GOOGLE_PHOTOS_AICI_9" alt="Mobilier dormitor">
-    </div>
+    <!-- SUFRAGERII -->
+    <section class="category">
+      <div class="category-header">
+        <h2>Sufragerii</h2>
+        <span class="category-count" id="sufragerii-count"></span>
+      </div>
+      <div class="gallery" id="sufragerii-gallery">
+        <div class="loading">Se încarcă...</div>
+      </div>
+    </section>
+
+    <!-- DORMITOARE -->
+    <section class="category">
+      <div class="category-header">
+        <h2>Dormitoare</h2>
+        <span class="category-count" id="dormitor-count"></span>
+      </div>
+      <div class="gallery" id="dormitor-gallery">
+        <div class="loading">Se încarcă...</div>
+      </div>
+    </section>
+
+    <!-- BAI -->
+    <section class="category">
+      <div class="category-header">
+        <h2>Băi</h2>
+        <span class="category-count" id="bai-count"></span>
+      </div>
+      <div class="gallery" id="bai-gallery">
+        <div class="loading">Se încarcă...</div>
+      </div>
+    </section>
+
+    <!-- BLAT CORIAN -->
+    <section class="category">
+      <div class="category-header">
+        <h2>Blat Corian</h2>
+        <span class="category-count" id="blat-count"></span>
+      </div>
+      <div class="gallery" id="blat-gallery">
+        <div class="loading">Se încarcă...</div>
+      </div>
+    </section>
   </div>
-</section>
+</div>
 
 <footer>
   © 2026 VeraMob Craiova
 </footer>
+
+<script>
+  // Lista de directoare pentru fiecare categorie
+  const categories = {
+    bucatarii: {
+      path: 'images/Bucatarii-3-001/Bucatarii/',
+      galleryId: 'bucatarii-gallery',
+      countId: 'bucatarii-count'
+    },
+    sufragerii: {
+      path: 'images/Sufragerii-3-001/Sufragerii/',
+      galleryId: 'sufragerii-gallery',
+      countId: 'sufragerii-count'
+    },
+    dormitor: {
+      path: 'images/Dormitor-3-001/Dormitor/',
+      galleryId: 'dormitor-gallery',
+      countId: 'dormitor-count'
+    },
+    bai: {
+      path: 'images/Băi-3-001/Băi/',
+      galleryId: 'bai-gallery',
+      countId: 'bai-count'
+    },
+    blat: {
+      path: 'images/Blat corian-3-001/Blat corian/',
+      galleryId: 'blat-gallery',
+      countId: 'blat-count'
+    }
+  };
+
+  // Lista completă de imagini pentru fiecare categorie (10 poze per categorie)
+  const allImages = {
+    bucatarii: [
+      'images/Bucatarii-3-001/Bucatarii/20200827_102955.jpg',
+      'images/Bucatarii-3-001/Bucatarii/20201015_145713.jpg',
+      'images/Bucatarii-3-001/Bucatarii/20201021_122002.jpg',
+      'images/Bucatarii-3-001/Bucatarii/20201021_122011.jpg',
+      'images/Bucatarii-3-001/Bucatarii/20201021_122014.jpg',
+      'images/Bucatarii-3-001/Bucatarii/20201127_114705.jpg',
+      'images/Bucatarii-3-001/Bucatarii/20210203_095918.jpg',
+      'images/Bucatarii-3-001/Bucatarii/20210203_095920.jpg',
+      'images/Bucatarii-3-001/Bucatarii/20210210_171421.jpg',
+      'images/Bucatarii-3-001/Bucatarii/PXL_20230620_123841745.jpg'
+    ],
+    sufragerii: [
+      'images/Sufragerii-3-001/Sufragerii/20210526_141105.jpg',
+      'images/Sufragerii-3-001/Sufragerii/20210714_145136.jpg',
+      'images/Sufragerii-3-001/Sufragerii/20210916_133616.jpg',
+      'images/Sufragerii-3-001/Sufragerii/20220112_112817.jpg',
+      'images/Sufragerii-3-001/Sufragerii/20220209_155920.jpg',
+      'images/Sufragerii-3-001/Sufragerii/20220209_155927.jpg',
+      'images/Sufragerii-3-001/Sufragerii/20220524_154633.jpg',
+      'images/Sufragerii-3-001/Sufragerii/20220704_140643.jpg',
+      'images/Sufragerii-3-001/Sufragerii/3_0001.png',
+      'images/Sufragerii-3-001/Sufragerii/IMG-20210416-WA0018.jpg',
+      'images/Sufragerii-3-001/Sufragerii/IMG-20210714-WA0004.jpg',
+      'images/Sufragerii-3-001/Sufragerii/IMG-20210714-WA0007.jpg',
+      'images/Sufragerii-3-001/Sufragerii/IMG-20221124-WA0006.jpg',
+      'images/Sufragerii-3-001/Sufragerii/IMG-20221124-WA0008.jpg',
+      'images/Sufragerii-3-001/Sufragerii/IMG-20230120-WA0005.jpg',
+      'images/Sufragerii-3-001/Sufragerii/IMG-20231101-WA0002.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20221115_133813897.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20221121_115233506.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20221121_115252590.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230407_084715943.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230413_124249067.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230413_124257003.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230413_124259467.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230413_124338285.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230613_121627928.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230613_123530660.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230613_130256055.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230613_130324579.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230620_123841745.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230620_124320460.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230620_124546974.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230629_115533479.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230714_061803834.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230714_061805776.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230822_102422448.MP.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20230922_060852018.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20231024_134047113.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20231024_134055960.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20231024_135102336.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20231024_135225315.MP.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20231206_082235158.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20231206_082243596.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20231214_105606166.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20231214_105613358.jpg',
+      'images/Sufragerii-3-001/Sufragerii/PXL_20231214_105616072.jpg'
+    ],
+    dormitor: [
+      'images/Dormitor-3-001/Dormitor/1.png',
+      'images/Dormitor-3-001/Dormitor/2(1).png',
+      'images/Dormitor-3-001/Dormitor/2(2).png',
+      'images/Dormitor-3-001/Dormitor/2.png',
+      'images/Dormitor-3-001/Dormitor/20200910_150851.jpg',
+      'images/Dormitor-3-001/Dormitor/20211126_195406.jpg',
+      'images/Dormitor-3-001/Dormitor/20211126_195412.jpg',
+      'images/Dormitor-3-001/Dormitor/20220712_164616.jpg',
+      'images/Dormitor-3-001/Dormitor/20220829_132500.jpg',
+      'images/Dormitor-3-001/Dormitor/PXL_20230620_123803889.jpg'
+    ],
+    bai: [
+      'images/Băi-3-001/Băi/20200221_173312.jpg',
+      'images/Băi-3-001/Băi/20200221_173429.jpg',
+      'images/Băi-3-001/Băi/20201021_122159.jpg',
+      'images/Băi-3-001/Băi/20201021_122206.jpg',
+      'images/Băi-3-001/Băi/20220427_152736.jpg',
+      'images/Băi-3-001/Băi/20220427_152743.jpg',
+      'images/Băi-3-001/Băi/20220922_110100.jpg',
+      'images/Băi-3-001/Băi/PXL_20221221_113925354.jpg',
+      'images/Băi-3-001/Băi/PXL_20221221_114350897.jpg',
+      'images/Băi-3-001/Băi/PXL_20230922_060818859.jpg'
+    ],
+    blat: [
+      'images/Blat corian-3-001/Blat corian/20220510_131413.jpg',
+      'images/Blat corian-3-001/Blat corian/20220510_131426.jpg',
+      'images/Blat corian-3-001/Blat corian/20220510_131435.jpg',
+      'images/Blat corian-3-001/Blat corian/PXL_20230116_111649463.jpg',
+      'images/Blat corian-3-001/Blat corian/PXL_20230116_111651293.jpg',
+      'images/Blat corian-3-001/Blat corian/PXL_20230116_121346800.jpg',
+      'images/Blat corian-3-001/Blat corian/PXL_20230117_070217941.jpg',
+      'images/Blat corian-3-001/Blat corian/PXL_20230117_070221432.jpg',
+      'images/Blat corian-3-001/Blat corian/PXL_20230117_104706715.jpg',
+      'images/Blat corian-3-001/Blat corian/PXL_20230117_104710632.jpg'
+    ]
+  };
+
+  // Funcție pentru a filtra doar imagini (exclude video-urile)
+  function isImageFile(path) {
+    const lowerPath = path.toLowerCase();
+    return lowerPath.endsWith('.jpg') || 
+           lowerPath.endsWith('.jpeg') || 
+           lowerPath.endsWith('.png') || 
+           lowerPath.endsWith('.mp.jpg') ||
+           lowerPath.endsWith('.portrait.jpg');
+  }
+
+  // Funcție pentru a încărca imagini în galerie
+  function loadGallery(categoryKey) {
+    const category = categories[categoryKey];
+    if (!category) {
+      console.error('Categorie necunoscută:', categoryKey);
+      return;
+    }
+    
+    const gallery = document.getElementById(category.galleryId);
+    const countEl = document.getElementById(category.countId);
+    
+    if (!gallery) {
+      console.error('Galerie negăsită:', category.galleryId);
+      return;
+    }
+
+    // Verifică dacă categoria are imagini definite
+    if (!allImages[categoryKey] || !Array.isArray(allImages[categoryKey])) {
+      console.error('Imagini nedefinite pentru categoria:', categoryKey);
+      gallery.innerHTML = '<div class="loading">Nu există imagini disponibile</div>';
+      return;
+    }
+
+    // Filtrează doar fișierele de imagini și limitează la 10
+    const allImageFiles = allImages[categoryKey].filter(isImageFile);
+    const imageFiles = allImageFiles.slice(0, 10);
+    
+    // Actualizează counter-ul
+    if (countEl) {
+      countEl.textContent = `(${imageFiles.length} imagini)`;
+    }
+
+    // Șterge mesajul de loading
+    gallery.innerHTML = '';
+
+    // Dacă nu există imagini
+    if (imageFiles.length === 0) {
+      gallery.innerHTML = '<div class="loading">Nu există imagini disponibile</div>';
+      return;
+    }
+
+    // Adaugă fiecare imagine
+    imageFiles.forEach((imagePath) => {
+      const item = document.createElement('div');
+      item.className = 'gallery-item';
+      item.dataset.imageSrc = imagePath;
+      item.dataset.category = categoryKey;
+      
+      const img = document.createElement('img');
+      img.src = imagePath;
+      img.alt = categoryKey.charAt(0).toUpperCase() + categoryKey.slice(1) + ' VeraMob';
+      img.loading = 'lazy';
+      img.onerror = function() {
+        console.warn('Eroare la încărcarea imaginii:', imagePath);
+        this.parentElement.style.display = 'none';
+      };
+      
+      item.appendChild(img);
+      gallery.appendChild(item);
+    });
+  }
+
+  // Încarcă toate galeriile
+  Object.keys(categories).forEach(categoryKey => {
+    console.log('Încărcare galerie pentru:', categoryKey);
+    loadGallery(categoryKey);
+  });
+
+  // LIGHTBOX FUNCTIONALITY
+  let currentCategoryImages = [];
+  let currentImageIndex = 0;
+  let currentCategory = '';
+
+  // Deschide lightbox-ul cu imaginile din categoria respectivă
+  function openLightbox(imageSrc, category) {
+    currentCategory = category;
+    if (!allImages[category]) {
+      console.error('Categorie necunoscută:', category);
+      return;
+    }
+    
+    const filteredImages = allImages[category].filter(isImageFile);
+    // Limitează la 10 imagini pentru lightbox
+    currentCategoryImages = filteredImages.slice(0, 10);
+    
+    if (currentCategoryImages.length === 0) {
+      console.error('Nu există imagini pentru categoria:', category);
+      return;
+    }
+    
+    // Găsește indexul imaginii curente
+    currentImageIndex = currentCategoryImages.indexOf(imageSrc);
+    if (currentImageIndex === -1) {
+      // Dacă imaginea nu este în primele 10, folosește prima
+      currentImageIndex = 0;
+    }
+    
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    if (!lightbox || !lightboxImg) {
+      console.error('Elemente lightbox negăsite');
+      return;
+    }
+    
+    lightboxImg.src = currentCategoryImages[currentImageIndex];
+    updateCounter();
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Închide lightbox-ul
+  function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Navigare la imaginea următoare
+  function nextImage() {
+    if (!currentCategoryImages || currentCategoryImages.length === 0) {
+      console.error('Nu există imagini pentru navigare');
+      return;
+    }
+    currentImageIndex = (currentImageIndex + 1) % currentCategoryImages.length;
+    const lightboxImg = document.getElementById('lightbox-img');
+    if (lightboxImg) {
+      lightboxImg.src = currentCategoryImages[currentImageIndex];
+      updateCounter();
+    }
+  }
+
+  // Navigare la imaginea anterioară
+  function prevImage() {
+    if (!currentCategoryImages || currentCategoryImages.length === 0) {
+      console.error('Nu există imagini pentru navigare');
+      return;
+    }
+    currentImageIndex = (currentImageIndex - 1 + currentCategoryImages.length) % currentCategoryImages.length;
+    const lightboxImg = document.getElementById('lightbox-img');
+    if (lightboxImg) {
+      lightboxImg.src = currentCategoryImages[currentImageIndex];
+      updateCounter();
+    }
+  }
+
+  // Actualizează counter-ul
+  function updateCounter() {
+    const counter = document.getElementById('lightbox-counter');
+    counter.textContent = `${currentImageIndex + 1} / ${currentCategoryImages.length}`;
+  }
+
+  // Adaugă event listeners pentru imagini
+  document.addEventListener('click', function(e) {
+    const item = e.target.closest('.gallery-item');
+    if (item) {
+      const img = item.querySelector('img');
+      if (img && item.dataset.category && item.dataset.imageSrc) {
+        openLightbox(item.dataset.imageSrc, item.dataset.category);
+      }
+    }
+  });
+
+  // Event listeners pentru butoane - folosim event delegation
+  document.addEventListener('click', function(e) {
+    // Buton închidere
+    if (e.target.id === 'lightbox-close' || e.target.closest('#lightbox-close')) {
+      e.stopPropagation();
+      closeLightbox();
+      return;
+    }
+    
+    // Buton next
+    if (e.target.id === 'lightbox-next' || e.target.closest('#lightbox-next')) {
+      e.stopPropagation();
+      nextImage();
+      return;
+    }
+    
+    // Buton prev
+    if (e.target.id === 'lightbox-prev' || e.target.closest('#lightbox-prev')) {
+      e.stopPropagation();
+      prevImage();
+      return;
+    }
+    
+    // Click pe background lightbox
+    if (e.target.id === 'lightbox') {
+      closeLightbox();
+      return;
+    }
+  });
+
+  // Închide lightbox cu ESC și săgeți
+  document.addEventListener('keydown', function(e) {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox && lightbox.classList.contains('active')) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'ArrowRight') {
+        nextImage();
+      } else if (e.key === 'ArrowLeft') {
+        prevImage();
+      }
+    }
+  });
+</script>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <div class="lightbox-close" id="lightbox-close">&times;</div>
+  <div class="lightbox-nav lightbox-prev" id="lightbox-prev">&#8249;</div>
+  <div class="lightbox-nav lightbox-next" id="lightbox-next">&#8250;</div>
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="Gallery Image">
+  </div>
+  <div class="lightbox-counter" id="lightbox-counter">1 / 1</div>
+</div>
+
+<script>
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', function() {
+      menuToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Close menu when clicking outside
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) {
+        menuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+</script>
 
 </body>
 </html>

@@ -4,127 +4,697 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VeraMob Craiova – Mobilier la comandă</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23DAA520;stop-opacity:0.3'/%3E%3Cstop offset='100%25' style='stop-color:%23DAA520;stop-opacity:0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='15' fill='url(%23grad)' stroke='%23DAA520' stroke-width='3' opacity='0.3'/%3E%3Ctext x='25' y='65' font-family='Arial, sans-serif' font-size='40' font-weight='bold' fill='%231a1a1a'%3EV%3C/text%3E%3Ctext x='60' y='65' font-family='Arial, sans-serif' font-size='40' font-weight='bold' fill='%231a1a1a'%3EM%3C/text%3E%3C/svg%3E">
 
   <meta name="description" content="VeraMob Craiova – mobilier la comandă: bucătării, living, dormitoare, dressinguri. Design modern, producție și montaj.">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+CU:wght@100..400&family=Playwrite+RO:wght@100..400&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #f7f7f7;
+      font-family: 'Inter', sans-serif;
+      background: #f5f3f0;
       color: #333;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     a { text-decoration: none; color: inherit; }
 
+    /* Playwrite CU Font Class */
+    .playwrite-cu-variable {
+      font-family: "Playwrite CU", cursive;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
     /* HEADER */
     header {
-      background: #1f2933;
-      color: #fff;
-      padding: 20px 0;
+      background: transparent;
+      padding: 25px 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
     }
 
     .header-container {
-      width: 90%;
-      max-width: 1200px;
+      max-width: 1400px;
       margin: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-transform: uppercase;
+    }
+
+    .logo-monogram {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(218, 165, 32, 0.15), rgba(218, 165, 32, 0.25));
+      border-radius: 8px;
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: #1a1a1a;
+      animation: furnitureFloat 3s ease-in-out infinite;
+      border: 2px solid rgba(218, 165, 32, 0.2);
+    }
+
+    .logo-monogram::before {
+      content: 'V';
+      position: absolute;
+      left: 8px;
+      font-size: 1.2rem;
+    }
+
+    .logo-monogram::after {
+      content: 'M';
+      position: absolute;
+      right: 8px;
+      font-size: 1.2rem;
+    }
+
+    @keyframes furnitureFloat {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-5px) rotate(5deg);
+      }
+    }
+
+    .logo:hover .logo-monogram {
+      animation: furnitureFloat 1s ease-in-out infinite;
+      background: linear-gradient(135deg, rgba(218, 165, 32, 0.25), rgba(218, 165, 32, 0.35));
+      border-color: rgba(218, 165, 32, 0.4);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    .desktop-nav {
+      display: flex;
+    }
+
     nav a {
-      margin-left: 20px;
-      color: #d1d5db;
+      color: #1a1a1a;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+      position: relative;
+      z-index: 1001;
+      letter-spacing: 0.3px;
+    }
+
+    nav a:hover { color: #666; }
+
+    .btn-header {
+      padding: 10px 24px;
+      border: 1px solid #1a1a1a;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.3s;
+      position: relative;
+      z-index: 1001;
+    }
+
+    .btn-header:hover {
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    /* MOBILE MENU */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+      z-index: 1002;
+      position: relative;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 2px;
+      background: #1a1a1a;
+      transition: all 0.3s;
+      border-radius: 2px;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .mobile-menu {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 1001;
+      padding: 100px 30px 30px;
+      flex-direction: column;
+      gap: 30px;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    .mobile-menu a {
+      font-size: 1.2rem;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+      color: #1a1a1a;
+      text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover { color: #fff; }
-
-    /* HERO */
-    .hero {
-      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c") center/cover no-repeat;
-      color: #fff;
-      padding: 100px 20px;
+    .mobile-menu .btn-header {
+      margin-top: 20px;
       text-align: center;
+      padding: 15px;
+      border-bottom: none;
     }
 
-    .hero h2 { font-size: 2.6rem; margin-bottom: 15px; }
-    .hero p { max-width: 700px; margin: auto; font-size: 1.2rem; }
-
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 30px;
-      background: #e07a2f;
-      color: #fff;
-      border-radius: 6px;
-      font-weight: 600;
-    }
-
-    section { padding: 70px 0; }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 40px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
+    /* MAIN CONTENT WRAPPER */
+    .main-wrapper {
       background: #fff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,.08);
-      text-align: center;
+      border-radius: 20px;
+      margin: 40px;
+      margin-top: 100px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 0 0 1px rgba(218, 165, 32, 0.08);
+      overflow: hidden;
+      position: relative;
     }
 
-    /* CONTACT */
-    .contact {
-      background: #1f2933;
+    /* HERO SECTION */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 85vh;
+      position: relative;
+    }
+
+    .hero-content {
+      padding: 120px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-label {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .hero-label::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(to right, rgba(218, 165, 32, 0.4), #1a1a1a);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 40px;
+      max-width: 500px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 50px;
+    }
+
+    .btn-primary {
+      padding: 16px 32px;
+      background: #1a1a1a;
       color: #fff;
-      text-align: center;
+      border: none;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
     }
 
-    .contact a { color: #f4a261; font-weight: 600; }
+    .btn-primary:hover {
+      background: #333;
+      box-shadow: 0 4px 12px rgba(218, 165, 32, 0.2);
+    }
+
+    .btn-primary i {
+      font-size: 1.1rem;
+      color: #25D366;
+    }
+
+    .btn-phone {
+      padding: 16px 32px;
+      background: transparent;
+      color: #1a1a1a;
+      border: 1px solid #1a1a1a;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s;
+    }
+
+    .btn-phone i {
+      color: #007bff;
+      transition: color 0.3s;
+    }
+
+    .btn-phone:hover {
+      background: #1a1a1a;
+      color: #fff;
+      border-color: rgba(218, 165, 32, 0.3);
+    }
+
+    .btn-phone:hover i {
+      color: #fff;
+    }
+
+    .contact-section {
+      margin-top: auto;
+    }
+
+    .contact-label {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 600px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      transition: all 0.3s;
+      color: #1a1a1a;
+      font-size: 0.95rem;
+    }
+
+    .contact-item:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1), 0 0 0 1px rgba(218, 165, 32, 0.15);
+    }
+
+    .contact-item i {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item .fa-map-marker-alt {
+      color: #dc3545;
+      background: rgba(220, 53, 69, 0.1);
+    }
+
+    .contact-item .fa-phone {
+      color: #007bff;
+      background: rgba(0, 123, 255, 0.1);
+    }
+
+    .contact-item .fa-envelope {
+      color: #ea4335;
+      background: rgba(234, 67, 53, 0.1);
+    }
+
+    .contact-item .fa-whatsapp {
+      color: #25D366;
+      background: rgba(37, 211, 102, 0.1);
+    }
+
+    .contact-item a {
+      color: #1a1a1a;
+      text-decoration: none;
+      transition: color 0.3s;
+      flex: 1;
+    }
+
+    .contact-item a:hover {
+      color: #666;
+    }
+
+    .contact-item span {
+      flex: 1;
+    }
+
+    .hero-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    /* STATISTICS SECTION */
+    .stats {
+      padding: 60px 80px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      border-top: 1px solid #eee;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .stat-line {
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(to bottom, rgba(218, 165, 32, 0.2), #ddd, rgba(218, 165, 32, 0.2));
+    }
+
+    .stat-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 5px;
+    }
+
+    .stat-content p {
+      font-size: 0.9rem;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* FOOTER */
+    /* TESTIMONIALS SECTION */
+    .testimonials {
+      padding: 80px 60px;
+      background: #f9f9f9;
+    }
+
+    .testimonials-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .testimonials h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #1a1a1a;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .testimonial-stars {
+      color: #ffc107;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .testimonial-author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(218, 165, 32, 0.2), rgba(218, 165, 32, 0.4));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .testimonial-author-info h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: #1a1a1a;
+      margin-bottom: 3px;
+    }
+
+    .testimonial-author-info p {
+      font-size: 0.85rem;
+      color: #666;
+    }
 
     footer {
-      background: #111827;
+      background: #1a1a1a;
       color: #9ca3af;
       text-align: center;
-      padding: 20px;
-      font-size: .9rem;
+      padding: 30px;
+      font-size: 0.9rem;
     }
 
     /* MOBILE */
+    @media (max-width: 1024px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        height: 400px;
+      }
+
+      .hero-image img {
+        clip-path: none;
+      }
+
+      .hero-content {
+        padding: 60px 40px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px;
+      }
+    }
+
     @media (max-width: 768px) {
-      .header-container { flex-direction: column; gap: 10px; }
-      nav { display: flex; gap: 15px; }
-      nav a { margin: 0; }
-      .hero h2 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
-      section { padding: 50px 0; }
+      header {
+        padding: 20px 30px;
+      }
+
+      .main-wrapper {
+        margin: 20px;
+        margin-top: 90px;
+        border-radius: 10px;
+      }
+
+      .hero-content {
+        padding: 40px 30px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px;
+      }
+
+      .desktop-nav {
+        display: none !important;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: flex;
+      }
+
+      nav {
+        gap: 15px;
+        font-size: 0.85rem;
+      }
+
+      .btn-header {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+      }
+
+      .contact-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .contact-item {
+        padding: 12px;
+      }
+
+      .contact-item i {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+      }
     }
 
     @media (max-width: 480px) {
-      .hero h2 { font-size: 1.8rem; }
-      .btn { padding: 12px 22px; }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .logo {
+        font-size: 1.4rem;
+      }
+
+      nav a {
+        font-size: 0.8rem;
+      }
+
+      .testimonials {
+        padding: 50px 30px;
+      }
+
+      .testimonials h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .testimonial-card {
+        padding: 25px;
+      }
     }
   </style>
 </head>
@@ -132,45 +702,205 @@
 
 <header>
   <div class="header-container">
-    <h1>VeraMob Craiova</h1>
-    <nav>
+    <a href="index.html" class="logo">
+      <div class="logo-monogram"></div>
+      <span>VeraMob</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="desktop-nav">
+      <a href="proiecte.html">Proiectele noastre</a>
+      <a href="#testimoniale">Testimoniale</a>
+      <a href="contact.html" class="btn-header">Contactează-ne</a>
+    </nav>
+    <nav class="mobile-menu" id="mobileMenu">
       <a href="index.html">Acasă</a>
-      <a href="proiecte.html">Proiecte</a>
-      <a href="#contact">Contact</a>
+      <a href="proiecte.html">Proiectele noastre</a>
+      <a href="#testimoniale">Testimoniale</a>
+      <a href="contact.html" class="btn-header">Contactează-ne</a>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <h2>Mobilier la comandă, creat pentru tine</h2>
-  <p>Bucătării, livinguri, dormitoare și dressinguri personalizate.</p>
-  <a href="https://wa.me/40775313403" class="btn">Cere ofertă WhatsApp</a>
-</section>
+<div class="main-wrapper">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Mobilier la comandă, creat pentru tine</h1>
+      
+      <div class="hero-buttons">
+        <a href="https://wa.me/40775313403" class="btn-primary">
+          <i class="fab fa-whatsapp"></i>
+          <span>Cere ofertă</span>
+        </a>
+        <a href="tel:+40775313403" class="btn-phone">
+          <i class="fas fa-phone"></i>
+          <span>Sună-ne</span>
+        </a>
+      </div>
 
-<section>
-  <div class="container">
-    <h2 class="section-title">Tipuri de mobilier</h2>
-    <div class="cards">
-      <div class="card"><h3>Bucătării</h3></div>
-      <div class="card"><h3>Living</h3></div>
-      <div class="card"><h3>Dormitoare</h3></div>
-      <div class="card"><h3>Dressinguri</h3></div>
+      <div class="contact-section">
+        <div class="contact-label">Contact</div>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Strada Deceneu 54, Craiova 200592</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:veramobcraiova@yahoo.com">veramobcraiova@yahoo.com</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
 
-<section id="contact" class="contact">
-  <div class="container">
-    <h2 class="section-title" style="color:#fff;">Contact</h2>
-    <p>📍 Strada Deceneu 54, Craiova 200592</p>
-    <p>📞 <a href="tel:+40775313403">+40 775 313 403</a></p>
-    <p>💬 <a href="https://wa.me/40775313403">WhatsApp</a></p>
+    <div class="hero-image">
+      <img src="images/Bucatarii-3-001/Bucatarii/20210924_143751.jpg" alt="Mobilier modern VeraMob">
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat-item">
+      <div class="stat-line"></div>
+      <div class="stat-content">
+        <h3>100+</h3>
+        <p>Clienți Mulțumiți</p>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-line"></div>
+      <div class="stat-content">
+        <h3>200+</h3>
+        <p>Piese de Mobilier</p>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-line"></div>
+      <div class="stat-content">
+        <h3>1000+</h3>
+        <p>Idei Unice Create</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="testimoniale" class="testimonials">
+  <div class="testimonials-container">
+    <h2>Ce spun clienții noștri</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Am comandat o bucătărie completă și sunt extrem de mulțumită! Calitatea materialelor este excelentă, iar montajul a fost realizat cu precizie. Echipa a fost foarte profesională și atență la detalii. Recomand cu încredere!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-author-avatar">MC</div>
+          <div class="testimonial-author-info">
+            <h4>Maria Constantinescu</h4>
+            <p>Craiova</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Dormitorul pe care l-am comandat este exact ce ne-am dorit. Design-ul modern și funcționalitatea perfectă ne-au făcut viața mult mai ușoară. Mobilierul este robust și arată minunat. Mulțumim echipei VeraMob!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-author-avatar">IP</div>
+          <div class="testimonial-author-info">
+            <h4>Ion Popescu</h4>
+            <p>Drobeta-Turnu Severin</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Am colaborat cu VeraMob pentru mobilierul din sufragerie și sunt impresionat de profesionalism. De la consultanță până la montaj, totul a decurs perfect. Mobilierul este de calitate superioară și se potrivește perfect cu stilul casei noastre."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-author-avatar">AN</div>
+          <div class="testimonial-author-info">
+            <h4>Andrei Năstase</h4>
+            <p>Slatina</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Bucătăria noastră nouă este absolut minunată! Design-ul personalizat se potrivește perfect cu spațiul disponibil. Calitatea este remarcabilă și prețul a fost corect. Suntem foarte mulțumiți și recomandăm cu căldură!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-author-avatar">ED</div>
+          <div class="testimonial-author-info">
+            <h4>Elena Dumitrescu</h4>
+            <p>Râmnicu Vâlcea</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Am optat pentru mobilier la comandă pentru baie și nu am fost dezamăgiți. Atenția la detalii, finisajele perfecte și respectarea termenelor ne-au impresionat. Mobilierul arată profesional și este foarte funcțional."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-author-avatar">RG</div>
+          <div class="testimonial-author-info">
+            <h4>Radu Georgescu</h4>
+            <p>Târgu Jiu</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Serviciile VeraMob au depășit așteptările noastre. De la primul contact până la finalizarea proiectului, totul a fost la superlativ. Mobilierul este de calitate premium și se integrează perfect în casa noastră. Mulțumim!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-author-avatar">SM</div>
+          <div class="testimonial-author-info">
+            <h4>Simona Munteanu</h4>
+            <p>Craiova</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer>
   © 2026 VeraMob Craiova
 </footer>
+
+<script>
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', function() {
+      menuToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Close menu when clicking outside
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) {
+        menuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
