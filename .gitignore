@@ -1,6 +1,14 @@
 # Archive folder with extra images
 images_archive/
 
+# Video files (too large for Git)
+*.mp4
+*.MP4
+*.mov
+*.MOV
+*.avi
+*.AVI
+
 # OS files
 .DS_Store
 Thumbs.db
